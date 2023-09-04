@@ -1,0 +1,14 @@
+D:\hoctap\OOP\vidu\bin\Debug\net7.0\vidu.exe
+D:\hoctap\OOP\vidu\bin\Debug\net7.0\vidu.deps.json
+D:\hoctap\OOP\vidu\bin\Debug\net7.0\vidu.runtimeconfig.json
+D:\hoctap\OOP\vidu\bin\Debug\net7.0\vidu.dll
+D:\hoctap\OOP\vidu\bin\Debug\net7.0\vidu.pdb
+D:\hoctap\OOP\vidu\obj\Debug\net7.0\vidu.GeneratedMSBuildEditorConfig.editorconfig
+D:\hoctap\OOP\vidu\obj\Debug\net7.0\vidu.AssemblyInfoInputs.cache
+D:\hoctap\OOP\vidu\obj\Debug\net7.0\vidu.AssemblyInfo.cs
+D:\hoctap\OOP\vidu\obj\Debug\net7.0\vidu.csproj.CoreCompileInputs.cache
+D:\hoctap\OOP\vidu\obj\Debug\net7.0\vidu.dll
+D:\hoctap\OOP\vidu\obj\Debug\net7.0\refint\vidu.dll
+D:\hoctap\OOP\vidu\obj\Debug\net7.0\vidu.pdb
+D:\hoctap\OOP\vidu\obj\Debug\net7.0\vidu.genruntimeconfig.cache
+D:\hoctap\OOP\vidu\obj\Debug\net7.0\ref\vidu.dll
