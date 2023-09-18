@@ -12,3 +12,10 @@ D:\hoctap\OOP\bai1\obj\Debug\net7.0\refint\bai1.dll
 D:\hoctap\OOP\bai1\obj\Debug\net7.0\bai1.pdb
 D:\hoctap\OOP\bai1\obj\Debug\net7.0\bai1.genruntimeconfig.cache
 D:\hoctap\OOP\bai1\obj\Debug\net7.0\ref\bai1.dll
+D:\hoctap\OOP\c1-vd\obj\Debug\net7.0\bai1.GeneratedMSBuildEditorConfig.editorconfig
+D:\hoctap\OOP\c1-vd\obj\Debug\net7.0\bai1.AssemblyInfoInputs.cache
+D:\hoctap\OOP\c1-vd\obj\Debug\net7.0\bai1.AssemblyInfo.cs
+D:\hoctap\OOP\c1-vd\obj\Debug\net7.0\bai1.csproj.CoreCompileInputs.cache
+D:\hoctap\OOP\c1-vd\obj\Debug\net7.0\bai1.dll
+D:\hoctap\OOP\c1-vd\obj\Debug\net7.0\refint\bai1.dll
+D:\hoctap\OOP\c1-vd\obj\Debug\net7.0\bai1.pdb

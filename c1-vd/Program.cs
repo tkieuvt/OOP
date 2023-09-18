@@ -7,43 +7,16 @@ namespace vidu
     {
         static void Main (string[] args)
         { 
-            int a,b,s=0;
-            a=int.Parse(Console.ReadLine());
-            b=int.Parse(Console.ReadLine());
-            TBPa (a, b);
+            int n = 0;
+            string s;
+            Console.Write("n=");
+            n = Convert.ToInt32(Console.ReadLine());
+            string[,] a = new string[n,n];
+            for (int i=0;i<n;i++)
+            {
+                s = Console.ReadLine();
+                a[i] = s.Split();
+            }
         }
-         static void TBPa (int a, int b)
-        { 
-            Console.WriteLine("a)Tong binh phuong {0}",a*a+b*b);
-        }
-        static void TBPb (out int a, out int b, int kq)
-        {
-            kq= a*a + b*b;
-            Console.WriteLine("b)Tong binh phuong " + kq);
-        }
-        // static void TBPc (out int a, out int b, int kq)
-        // {
-        //     kq= a*a + b*b;
-        //     Console.WriteLine("b)Tong binh phuong " + kq);
-        // }
-
-            // int i,n;
-            // n = int.Parse(Console.ReadLine());
-            // int [] a = new int[n];
-            // for (i=1;i<=n;i++)
-            // {
-            //      a[i] = int.Parse(Console.ReadLine());
-            // }
-            // for (i=1;i<=n;i++)
-            //     Console.WriteLine("Gio {0} co {1} san pham",i,a);
-
-            // int i,j,S=0;
-            // Console.Write("Nhap vao so luong bi gio do: ");
-            // i = Convert.ToInt32(Console.ReadLine());
-            // // i = int.Parse(Console.ReadLine())
-            // j = Convert.ToInt32(Console.ReadLine());
-            // S = i + j;
-            // Console.WriteLine(S);
-        //}
     }
 }

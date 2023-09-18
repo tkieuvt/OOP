@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\hoctap\\OOP\\bai1\\bai1.csproj": {}
+    "D:\\hoctap\\OOP\\c1-vd\\bai1.csproj": {}
   },
   "projects": {
-    "D:\\hoctap\\OOP\\bai1\\bai1.csproj": {
+    "D:\\hoctap\\OOP\\c1-vd\\bai1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\hoctap\\OOP\\bai1\\bai1.csproj",
+        "projectUniqueName": "D:\\hoctap\\OOP\\c1-vd\\bai1.csproj",
         "projectName": "bai1",
-        "projectPath": "D:\\hoctap\\OOP\\bai1\\bai1.csproj",
+        "projectPath": "D:\\hoctap\\OOP\\c1-vd\\bai1.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\hoctap\\OOP\\bai1\\obj\\",
+        "outputPath": "D:\\hoctap\\OOP\\c1-vd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
