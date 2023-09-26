@@ -1,0 +1,14 @@
+D:\hoctap\OOP\c2-b2\bin\Debug\net7.0\c2-b2.exe
+D:\hoctap\OOP\c2-b2\bin\Debug\net7.0\c2-b2.deps.json
+D:\hoctap\OOP\c2-b2\bin\Debug\net7.0\c2-b2.runtimeconfig.json
+D:\hoctap\OOP\c2-b2\bin\Debug\net7.0\c2-b2.dll
+D:\hoctap\OOP\c2-b2\bin\Debug\net7.0\c2-b2.pdb
+D:\hoctap\OOP\c2-b2\obj\Debug\net7.0\c2-b2.GeneratedMSBuildEditorConfig.editorconfig
+D:\hoctap\OOP\c2-b2\obj\Debug\net7.0\c2-b2.AssemblyInfoInputs.cache
+D:\hoctap\OOP\c2-b2\obj\Debug\net7.0\c2-b2.AssemblyInfo.cs
+D:\hoctap\OOP\c2-b2\obj\Debug\net7.0\c2-b2.csproj.CoreCompileInputs.cache
+D:\hoctap\OOP\c2-b2\obj\Debug\net7.0\c2-b2.dll
+D:\hoctap\OOP\c2-b2\obj\Debug\net7.0\refint\c2-b2.dll
+D:\hoctap\OOP\c2-b2\obj\Debug\net7.0\c2-b2.pdb
+D:\hoctap\OOP\c2-b2\obj\Debug\net7.0\c2-b2.genruntimeconfig.cache
+D:\hoctap\OOP\c2-b2\obj\Debug\net7.0\ref\c2-b2.dll
