@@ -5,7 +5,7 @@ class Meo
 {
     public string ten, giong, gioitinh;
     public int tuoi;
-    public static int dem;
+    public static int dem=0;
     public void nhap()
     {
         Console.Write("Ten meo la ");
@@ -40,7 +40,7 @@ class Meo
     public static int Dem()
     {
         return dem;
-    }
+    } 
 }
 class Program
 {
