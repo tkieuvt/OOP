@@ -1,0 +1,6 @@
+Xây dựng lớp NhaphocTKTH gồm:
+Thuộc tính: họ tên sinh viên, ngày sinh, giới tính, chuyên ngành(thống kê, quản trị httt,thql)
+Phương thức:
+-hàm khởi tạo để nhập thông tin(trên 10 sv có thể dùng mảng, list hoặc không)
+-hàm LocSV để lọc sinh viên theo chuyên ngành. Xuất ra màn hình danh sách sinh viên và tổng số lượng sinh viên nhập học theo chuyên ngành đã chọn
+-hàm ThongKe để biết được có bao nhiêu sinh viên nam và sinh viên nữ theo học các chuyên ngành

@@ -1,60 +1,55 @@
-﻿// // See https://aka.ms/new-console-template for more information
-using System;
-using System.Collections.Generic;
-using System.Net;
-class doanhnghiep
+﻿using System.Security.Cryptography.X509Certificates;
+class Doanhnghiep
 {
-    public string tenDN { get; set; }
-    public string MST { get; set; }
-    public string diachi { get; set; }
-}
-class danhSachDN
-{
-    public static int count = 0;
-    doanhnghiep DN = new doanhnghiep();
-    public danhSachDN()
+    public string tenDN,mst,diachi;
+    public Doanhnghiep()
     {
-        Array.Resize(ref IndexDN.ds,count+1);
-        Console.Write("Ten doanh nghiep: ");
-        DN.tenDN = Console.ReadLine();
-        Console.Write("Ma so thue: ");
-        DN.MST= Console.ReadLine();
-        Console.Write("Dia chi: ");
-        DN.diachi= Console.ReadLine();
-        IndexDN.ds[count]=DN.tenDN+" "+DN.MST+" "+DN.diachi;
-        count++;   
-    }
-    public void xuatDS()
-    {
-        for (int i=0;i<count;i++)
-            Console.WriteLine(IndexDN.ds[i]);
+        Console.Write("Ten doanh nghiep:");
+        tenDN = Console.ReadLine();
+        Console.Write("Ma so thue:");
+        mst = Console.ReadLine();
+        Console.Write("Dia chi:");
+        diachi = Console.ReadLine();
     }
 }
-class IndexDN
+class DanhSachDN
 {
-    public static string [] ds = new string[danhSachDN.count];
-    public string this [string ten]
+    public List<Doanhnghiep> ds_DN ;
+    public DanhSachDN()
     {
-        get 
+        ds_DN = new List<Doanhnghiep>();
+        Doanhnghiep dn1 = new Doanhnghiep();
+        ds_DN.Add(dn1);
+        Doanhnghiep dn2 = new Doanhnghiep();
+        ds_DN.Add(dn2);
+        Doanhnghiep dn3 = new Doanhnghiep();
+        ds_DN.Add(dn3);
+    }
+    public void xuat()
+    {
+        foreach (var dn in ds_DN)
         {
-            for (int i=0;i<danhSachDN.count;i++)
-            {
-                string[] s = ds[i].Split();
-                if (ten==s[0]) {return s[1];}
-            }
-            return "Khong ton tai";
+            Console.WriteLine($"Ten doanh nghiep: {dn.tenDN}, ma so thue: {dn.mst}, dia chi: {dn.diachi}");
         }
     }
-    public string this [int ma]
+    public string TimMST(string ten)
     {
-        get
+        for (int i=0;i<ds_DN.Count;i++)
         {
-            for (int i=0;i<danhSachDN.count;i++)
-            {
-                string[] s = ds[i].Split();
-                if (ma.ToString()==s[1]) {return s[0]+" "+s[2];}
-            }
-            return "Khong ton tai";
+            if (ds_DN[i].tenDN==ten) {return ds_DN[i].mst;}
+        }
+        return "";
+    }
+    public void TimInfoDNTheoMST(string mast,out string ten,out string dc)
+    {
+        ten = "";dc = "";
+        for (int i=0;i<ds_DN.Count;i++)
+        {
+            if (ds_DN[i].mst==mast) 
+                {
+                    ten = ds_DN[i].tenDN;
+                    dc = ds_DN[i].diachi;
+                }
         }
     }
 }
@@ -62,130 +57,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        danhSachDN dn1 = new danhSachDN();
-        danhSachDN dn2 = new danhSachDN();
-        IndexDN index = new IndexDN();
-        Console.Write("Nhap ten doanh nghiep can tim MST:");
+        DanhSachDN danhsach = new DanhSachDN();
+        Console.WriteLine("DANH SÁCH DOANH NGHIEP");
+        danhsach.xuat();
+        Console.Write("Nhap ten DN can tim MST:");
         string ten = Console.ReadLine();
-        Console.WriteLine(index[ten]);
-        Console.Write("Nhap MST cua doanh nghiep can tim:");
-        int ma = Convert.ToInt16(Console.ReadLine());
-        Console.WriteLine(index[ma]);
+        if (danhsach.TimMST(ten)!="") 
+            {Console.WriteLine($"Doanh nghiep {ten} co MST la {danhsach.TimMST(ten)}");}
+        else {Console.WriteLine($"Khong tim thay MST cua doanh nghiep {ten}");}
+        string diaChi="";ten="";
+        Console.Write("Nhap MST can tim thong tin:");
+        string Mst = Console.ReadLine();
+        danhsach.TimInfoDNTheoMST(Mst,out ten,out diaChi);
+        if (diaChi!="" & ten!="")
+            {Console.WriteLine($"DN co MST {Mst} la {ten}, diachi: {diaChi}");}
+        else {Console.WriteLine("Khong tim thay");}
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// using System;
-// using System.Collections.Generic;
-
-// class DoanhNghiep
-// {
-//     public string TenDN { get; set; }
-//     public string MST { get; set; }
-//     public string DiaChi { get; set; }
-
-//     public DoanhNghiep(string tenDN, string mst, string diaChi)
-//     {
-//         TenDN = tenDN;
-//         MST = mst;
-//         DiaChi = diaChi;
-//     }
-// }
-
-// class DanhSachDN
-// {
-//     private Dictionary<string, DoanhNghiep> danhSachDoanhNghiep = new Dictionary<string, DoanhNghiep>();
-
-//     public void NhapDanhSach()
-//     {
-//         Console.Write("Nhập số lượng doanh nghiệp: ");
-//         int soLuongDN = int.Parse(Console.ReadLine());
-
-//         for (int i = 0; i < soLuongDN; i++)
-//         {
-//             Console.WriteLine($"Nhập thông tin doanh nghiệp {i + 1}:");
-//             Console.Write("Tên doanh nghiệp: ");
-//             string tenDN = Console.ReadLine();
-//             Console.Write("Mã số thuế: ");
-//             string mst = Console.ReadLine();
-//             Console.Write("Địa chỉ: ");
-//             string diaChi = Console.ReadLine();
-
-//             DoanhNghiep dn = new DoanhNghiep(tenDN, mst, diaChi);
-//             danhSachDoanhNghiep.Add(mst, dn);
-//         }
-//     }
-
-//     public void XuatDanhSach()
-//     {
-//         Console.WriteLine("Danh sách doanh nghiệp:");
-//         foreach (var dn in danhSachDoanhNghiep.Values)
-//         {
-//             Console.WriteLine($"Tên DN: {dn.TenDN}, Mã số thuế: {dn.MST}, Địa chỉ: {dn.DiaChi}");
-//         }
-//     }
-
-//     public string TimMaSoThueTheoTen(string tenDN)
-//     {
-//         foreach (var dn in danhSachDoanhNghiep.Values)
-//         {
-//             if (dn.TenDN == tenDN)
-//             {
-//                 return dn.MST;
-//             }
-//         }
-//         return null; // Trả về null nếu không tìm thấy
-//     }
-
-//     public void TimThongTinTheoMaSoThue(string mst)
-//     {
-//         if (danhSachDoanhNghiep.ContainsKey(mst))
-//         {
-//             DoanhNghiep dn = danhSachDoanhNghiep[mst];
-//             Console.WriteLine($"Tên DN: {dn.TenDN}, Địa chỉ: {dn.DiaChi}");
-//         }
-//         else
-//         {
-//             Console.WriteLine($"Không tìm thấy thông tin doanh nghiệp với Mã số thuế {mst}");
-//         }
-//     }
-// }
-
-// class Program
-// {
-//     static void Main()
-//     {
-//         DanhSachDN danhSachDN = new DanhSachDN();
-
-//         danhSachDN.NhapDanhSach();
-//         danhSachDN.XuatDanhSach();
-
-//         Console.Write("\nNhập tên doanh nghiệp để tìm Mã số thuế: ");
-//         string tenDoanhNghiep = Console.ReadLine();
-//         string mst = danhSachDN.TimMaSoThueTheoTen(tenDoanhNghiep);
-
-//         if (mst != null)
-//         {
-//             Console.WriteLine($"Mã số thuế của doanh nghiệp {tenDoanhNghiep} là {mst}");
-//         }
-//         else
-//         {
-//             Console.WriteLine($"Không tìm thấy thông tin doanh nghiệp với tên {tenDoanhNghiep}");
-//         }
-
-//         Console.Write("\nNhập Mã số thuế để tìm thông tin doanh nghiệp: ");
-//         string mstNhap = Console.ReadLine();
-//         danhSachDN.TimThongTinTheoMaSoThue(mstNhap);
-//     }
-// }

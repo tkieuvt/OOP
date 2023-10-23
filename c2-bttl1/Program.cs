@@ -1,41 +1,61 @@
 ﻿// See https://aka.ms/new-console-template for more information
 // bài 50đ
+
 class NhaphocTKTH
 {
-    public string hoten,ngsinh,gtinh,chnganh;
-    // public static int[] a = new int[10];
-    public void nhap()
+    public string hoten,ngaysinh,gioitinh,chuyennganh;
+    public NhaphocTKTH(string hoten,string ngaysinh,string gioitinh,string chuyennganh)
     {
-        Console.Write("Ho ten la ");
-        hoten = Console.ReadLine();
-        Console.Write("Ngay sinh la ");
-        ngsinh = Console.ReadLine();
-        Console.Write("Gioi tinh la ");
-        gtinh = Console.ReadLine();
-        Console.Write("Chuyen nganh ");
-        chnganh = Console.ReadLine();
+        this.hoten=hoten;
+        this.ngaysinh=ngaysinh;
+        this.gioitinh=gioitinh;
+        this.chuyennganh=chuyennganh;
+        // Console.Write("Ho ten la ");
+        // hoten = Console.ReadLine();
+        // Console.Write("Ngay sinh la ");
+        // ngaysinh = Console.ReadLine();
+        // Console.Write("Gioi tinh la ");
+        // gioitinh = Console.ReadLine();
+        // Console.Write("Chuyen nganh ");
+        // chuyennganh = Console.ReadLine();
     }
-    public NhaphocTKTH()
-    {}
-    public NhaphocTKTH(string a,string b,string c,string d)
+    public void xuat()
     {
-        hoten = a;
-        ngsinh = b;
-        gtinh = c;
-        chnganh = d;
+        Console.WriteLine($"Ho ten: {hoten}, ngay sinh: {ngaysinh}, gioitinh: {gioitinh}, chuyen nganh: {chuyennganh}");
     }
+    // public void locSV()
+    // {
 
+    // }
 }
 class c2bttl1
 {
     static void Main(string[] args)
     {
-        List<NhaphocTKTH> nhaphoc = new List<NhaphocTKTH>();
-        string stt=" ";
-        while (stt =="")
+        List<NhaphocTKTH> ds = new List<NhaphocTKTH>();
+        NhaphocTKTH sv1 = new NhaphocTKTH("1","1","Nam","TK");
+        ds.Add(sv1);
+        NhaphocTKTH sv2 = new NhaphocTKTH("2","2","Nu","QTHTTT");
+        ds.Add(sv2);
+        NhaphocTKTH sv3 = new NhaphocTKTH("3","3","Nam","THQL");
+        ds.Add(sv3);
+        NhaphocTKTH sv4 = new NhaphocTKTH("4","4","Nu","TK");
+        ds.Add(sv4);
+        NhaphocTKTH sv5 = new NhaphocTKTH("5","5","Nam","QTHTTH");
+        ds.Add(sv5);
+        NhaphocTKTH sv6 = new NhaphocTKTH("6","6","Nu","THQL");
+        ds.Add(sv6);
+        NhaphocTKTH sv7 = new NhaphocTKTH("7","7","Nam","TK");
+        ds.Add(sv7);
+        NhaphocTKTH sv8 = new NhaphocTKTH("8","8","Nu","QTHTTT");
+        ds.Add(sv8);
+        NhaphocTKTH sv9 = new NhaphocTKTH("9","9","Nam","THQL");
+        ds.Add(sv9);
+        NhaphocTKTH sv10 = new NhaphocTKTH("10","10","Nu","TK");
+        ds.Add(sv10);
+        for (int i=0;i<ds.Count;i++)
         {
-            NhaphocTKTH thongtin = new NhaphocTKTH();
-
+            ds[i].xuat();
         }
     }
 }
