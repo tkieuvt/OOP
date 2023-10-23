@@ -1,0 +1,14 @@
+D:\hoctap\OOP\c4-bttl2\obj\Debug\net7.0\c4-bttl2.GeneratedMSBuildEditorConfig.editorconfig
+D:\hoctap\OOP\c4-bttl2\obj\Debug\net7.0\c4-bttl2.AssemblyInfoInputs.cache
+D:\hoctap\OOP\c4-bttl2\obj\Debug\net7.0\c4-bttl2.AssemblyInfo.cs
+D:\hoctap\OOP\c4-bttl2\obj\Debug\net7.0\c4-bttl2.csproj.CoreCompileInputs.cache
+D:\hoctap\OOP\c4-bttl2\bin\Debug\net7.0\c4-bttl2.exe
+D:\hoctap\OOP\c4-bttl2\bin\Debug\net7.0\c4-bttl2.deps.json
+D:\hoctap\OOP\c4-bttl2\bin\Debug\net7.0\c4-bttl2.runtimeconfig.json
+D:\hoctap\OOP\c4-bttl2\bin\Debug\net7.0\c4-bttl2.dll
+D:\hoctap\OOP\c4-bttl2\bin\Debug\net7.0\c4-bttl2.pdb
+D:\hoctap\OOP\c4-bttl2\obj\Debug\net7.0\c4-bttl2.dll
+D:\hoctap\OOP\c4-bttl2\obj\Debug\net7.0\refint\c4-bttl2.dll
+D:\hoctap\OOP\c4-bttl2\obj\Debug\net7.0\c4-bttl2.pdb
+D:\hoctap\OOP\c4-bttl2\obj\Debug\net7.0\c4-bttl2.genruntimeconfig.cache
+D:\hoctap\OOP\c4-bttl2\obj\Debug\net7.0\ref\c4-bttl2.dll

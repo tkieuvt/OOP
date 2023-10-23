@@ -1,0 +1,14 @@
+D:\hoctap\OOP\c4_1_b4\bin\Debug\net7.0\c4_1_b4.exe
+D:\hoctap\OOP\c4_1_b4\bin\Debug\net7.0\c4_1_b4.deps.json
+D:\hoctap\OOP\c4_1_b4\bin\Debug\net7.0\c4_1_b4.runtimeconfig.json
+D:\hoctap\OOP\c4_1_b4\bin\Debug\net7.0\c4_1_b4.dll
+D:\hoctap\OOP\c4_1_b4\bin\Debug\net7.0\c4_1_b4.pdb
+D:\hoctap\OOP\c4_1_b4\obj\Debug\net7.0\c4_1_b4.GeneratedMSBuildEditorConfig.editorconfig
+D:\hoctap\OOP\c4_1_b4\obj\Debug\net7.0\c4_1_b4.AssemblyInfoInputs.cache
+D:\hoctap\OOP\c4_1_b4\obj\Debug\net7.0\c4_1_b4.AssemblyInfo.cs
+D:\hoctap\OOP\c4_1_b4\obj\Debug\net7.0\c4_1_b4.csproj.CoreCompileInputs.cache
+D:\hoctap\OOP\c4_1_b4\obj\Debug\net7.0\c4_1_b4.dll
+D:\hoctap\OOP\c4_1_b4\obj\Debug\net7.0\refint\c4_1_b4.dll
+D:\hoctap\OOP\c4_1_b4\obj\Debug\net7.0\c4_1_b4.pdb
+D:\hoctap\OOP\c4_1_b4\obj\Debug\net7.0\c4_1_b4.genruntimeconfig.cache
+D:\hoctap\OOP\c4_1_b4\obj\Debug\net7.0\ref\c4_1_b4.dll
