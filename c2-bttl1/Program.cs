@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-// bài 50đ
-
+﻿using System.Security.Cryptography;
 class NhaphocTKTH
 {
     public string hoten,ngaysinh,gioitinh,chuyennganh;
@@ -10,29 +8,11 @@ class NhaphocTKTH
         this.ngaysinh=ngaysinh;
         this.gioitinh=gioitinh;
         this.chuyennganh=chuyennganh;
-        // Console.Write("Ho ten la ");
-        // hoten = Console.ReadLine();
-        // Console.Write("Ngay sinh la ");
-        // ngaysinh = Console.ReadLine();
-        // Console.Write("Gioi tinh la ");
-        // gioitinh = Console.ReadLine();
-        // Console.Write("Chuyen nganh ");
-        // chuyennganh = Console.ReadLine();
     }
-    public void xuat()
+    public List<NhaphocTKTH> ds;
+    public NhaphocTKTH()
     {
-        Console.WriteLine($"Ho ten: {hoten}, ngay sinh: {ngaysinh}, gioitinh: {gioitinh}, chuyen nganh: {chuyennganh}");
-    }
-    // public void locSV()
-    // {
-
-    // }
-}
-class c2bttl1
-{
-    static void Main(string[] args)
-    {
-        List<NhaphocTKTH> ds = new List<NhaphocTKTH>();
+        ds = new List<NhaphocTKTH>();
         NhaphocTKTH sv1 = new NhaphocTKTH("1","1","Nam","TK");
         ds.Add(sv1);
         NhaphocTKTH sv2 = new NhaphocTKTH("2","2","Nu","QTHTTT");
@@ -41,7 +21,7 @@ class c2bttl1
         ds.Add(sv3);
         NhaphocTKTH sv4 = new NhaphocTKTH("4","4","Nu","TK");
         ds.Add(sv4);
-        NhaphocTKTH sv5 = new NhaphocTKTH("5","5","Nam","QTHTTH");
+        NhaphocTKTH sv5 = new NhaphocTKTH("5","5","Nam","QTHTTT");
         ds.Add(sv5);
         NhaphocTKTH sv6 = new NhaphocTKTH("6","6","Nu","THQL");
         ds.Add(sv6);
@@ -53,82 +33,57 @@ class c2bttl1
         ds.Add(sv9);
         NhaphocTKTH sv10 = new NhaphocTKTH("10","10","Nu","TK");
         ds.Add(sv10);
+    }
+
+    public void xuat()
+    {
+        foreach (var sv in ds)
+        {Console.WriteLine($"Ho ten: {sv.hoten}, ngay sinh: {sv.ngaysinh}, gioitinh: {sv.gioitinh}, chuyen nganh: {sv.chuyennganh}");}
+    }
+    public void locSV(string ten)
+    {
+        int dem=0;
+        for (int i=0;i<ds.Count;i++)
+        {   
+            if (ds[i].chuyennganh==ten)
+            {
+                dem++;
+                Console.WriteLine($"Ho ten: {ds[i].hoten}, ngay sinh: {ds[i].ngaysinh}, gioitinh: {ds[i].gioitinh}, chuyen nganh: {ds[i].chuyennganh}");
+            }      
+        }
+        Console.WriteLine($"So luong sinh vien chuyen nganh {ten} la {dem}\n");  
+    }
+    public void thongke(string nganh,out int nam,out int nu)
+    {
+        nam = 0; nu = 0;
         for (int i=0;i<ds.Count;i++)
         {
-            ds[i].xuat();
+            if (ds[i].chuyennganh==nganh)
+            {
+                if (ds[i].gioitinh=="Nam") {nam++;}
+                else {nu++;}
+            }
         }
     }
 }
-// class Program
-// {
-//     static void Main()
-//     {
-//         List<info> danhSachSinhVien = new List<info>();
-
-//         Console.Write("Nhập số lượng sinh viên: ");
-//         int soLuongSinhVien = Convert.ToInt32(Console.ReadLine());
-
-//         // Nhập thông tin sinh viên
-//         for (int i = 0; i < soLuongSinhVien; i++)
-//         {
-//             info sinhVien = NhapThongTinSinhVien();
-//             danhSachSinhVien.Add(sinhVien);
-//         }
-
-//         // Xuất số lượng sinh viên
-//         XuatSoLuongSinhVien(danhSachSinhVien);
-
-//         // Nhập điểm thành phần và xuất thông tin sinh viên
-//         foreach (info sinhVien in danhSachSinhVien)
-//         {
-//             DiemTP diemThanhPhan = NhapDiemThanhPhan();
-//             double diemTrungBinh = TinhDiemTrungBinh(diemThanhPhan);
-//             XuatThongTinVaDiem(sinhVien, diemTrungBinh);
-//             Console.WriteLine();
-//         }
-//     }
-
-//     static info NhapThongTinSinhVien()
-//     {
-//         Console.Write("Nhập mã sinh viên: ");
-//         string maSinhVien = Console.ReadLine();
-
-//         Console.Write("Nhập họ và tên sinh viên: ");
-//         string hoTen = Console.ReadLine();
-
-//         Console.Write("Nhập lớp sinh hoạt: ");
-//         string lop = Console.ReadLine();
-
-//         return new info { id = maSinhVien, hoten = hoTen, group = lop };
-//     }
-
-//     static void XuatSoLuongSinhVien(List<info> danhSachSinhVien)
-//     {
-//         Console.WriteLine($"Số lượng sinh viên trong lớp OOP là: {danhSachSinhVien.Count}");
-//     }
-
-//     static DiemTP NhapDiemThanhPhan()
-//     {
-//         Console.Write("Nhập điểm TP1: ");
-//         double tp1 = Convert.ToDouble(Console.ReadLine());
-
-//         Console.Write("Nhập điểm TP2: ");
-//         double tp2 = Convert.ToDouble(Console.ReadLine());
-
-//         Console.Write("Nhập điểm TP3: ");
-//         double tp3 = Convert.ToDouble(Console.ReadLine());
-
-//         return new DiemTP { TP1 = tp1, TP2 = tp2, TP3 = tp3 };
-//     }
-
-//     static double TinhDiemTrungBinh(DiemTP diemThanhPhan)
-//     {
-//         return diemThanhPhan.TP1 * 0.1 + diemThanhPhan.TP2 * 0.3 + diemThanhPhan.TP3 * 0.6;
-//     }
-
-//     static void XuatThongTinVaDiem(info sinhVien, double diemTrungBinh)
-//     {
-//         Console.WriteLine($"Thông tin sinh viên - Mã SV: {sinhVien.id}, Họ tên: {sinhVien.hoten}, Lớp: {sinhVien.group}");
-//         Console.WriteLine($"Điểm trung bình môn OOP: {diemTrungBinh}");
-//     }
-// }
+class c2bttl1
+{
+    static void Main(string[] args)
+    {
+        NhaphocTKTH a = new NhaphocTKTH();
+        a.xuat();
+        int nam=0,nu=0;
+        a.thongke("TK",out nam,out nu);
+        Console.WriteLine("DANH SACH SINH VIEN THEO TUNG NGANH TRONG KHOA THONG KE TIN HOC");
+        a.locSV("TK");
+        a.locSV("QTHTTT");
+        a.locSV("THQL");
+        Console.WriteLine("SO LUONG SINH VIEN NAM/NU THEO TUNG CHUYEN NGANH");
+        Console.WriteLine($"So luong sinh vien chuyen nganh Thong Ke là Nam: {nam}, Nu: {nu}");
+        a.thongke("QTHTTT",out nam,out nu);
+        Console.WriteLine($"So luong sinh vien chuyen nganh Quan tri HTTT là Nam: {nam}, Nu: {nu}");
+        a.thongke("THQL",out nam,out nu);
+        Console.WriteLine($"So luong sinh vien chuyen nganh THQL là Nam: {nam}, Nu: {nu}");
+    }
+}
+ 

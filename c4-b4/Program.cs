@@ -50,6 +50,6 @@ class Program
         Console.WriteLine($"So luong sinh vien trong lop hoc phan OOP la {info.dem}");
         sv1.xuat();
         sv2.xuat();
-        sv3.xuat();
+        sv3.xuat(); 
     }
 }

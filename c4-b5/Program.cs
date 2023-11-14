@@ -10,7 +10,7 @@ class Doanhnghiep
         mst = Console.ReadLine();
         Console.Write("Dia chi:");
         diachi = Console.ReadLine();
-    }
+    } 
 }
 class DanhSachDN
 {
