@@ -9,7 +9,6 @@ namespace BANHANG
 {
     class Shop
     {
-        // MaSP (mã sản phẩm), TenSP (tên sản phẩm), Tonkho (Tồn kho), Phanloai (Phân loại), Giaban (Giá bán)
         string MaSP, TenSP, Phanloai;
         int Tonkho, Giaban;
         public string maSP {get {return MaSP;}set{ MaSP=value;}}

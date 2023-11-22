@@ -1,0 +1,56 @@
+Xây dựng lớp Shop (Cửa hàng) gồm các thuộc tính: MaSP (mã sản phẩm), TenSP (tên sản phẩm), 
+Tonkho (Tồn kho), Phanloai (Phân loại), Giaban (Giá bán).
+
+Từ đó xây dựng một chương trình quản lý sản phẩm thời trang, trong đó:
+
+1. Xây dựng lớp Shop với các thuộc tính ở phạm vi truy cập private (2 điểm)
+
+2. Xây dựng lớp QuanlyShop, là danh sách các sản phẩm được nhập từ file .txt (2 điểm)
+
+3. Tạo các phương thức quản lý sản phẩm theo Menu sau:
+
+Bấm 1: Cập nhật (Cập nhật/ Sửa lại số lượng và giá bán của sản phẩm theo mã sản phẩm, 
+xuất ra màn hình danh sách đã thay đổi) (2 điểm)
+
+Bấm 2: Thống kê (Thống kê và xuất ra sản phẩm có lượng tồn kho thấp 
+(nhỏ hơn hoặc bằng 10 sản phẩm) (2 điểm)
+
+Bấm 3: Mua hàng (Nhập các mã sản phẩm cần mua, số lượng, 
+Xuất ra màn hình số tiền cần phải trả cho hóa đơn mua hàng. 
+Trường hợp không tìm thấy mã sản phẩm hoặc số lượng lớn hơn số lượng trong danh sách 
+thì xuất ra màn hình “Không hợp lệ”) (2 điểm)
+
+Bấm 0: Exit
+
+            Console.WriteLine("Nhap thong tin san pham can mua:");
+            string[] ma = new string [1000];
+            int[] sl= new int[1000];
+            int j=0,t=0;
+            while (true)
+            {
+                Console.Write("Ma san pham: ");
+                ma[j] =Console.ReadLine();
+                Console.Write("So luong: ");
+                sl[j] =Convert.ToInt32(Console.ReadLine());
+                j++; 
+                Console.WriteLine("Nhan 1 de mua them; nhan 0 de ket thuc");
+                t=Convert.ToInt32(Console.ReadLine());
+                if (t==0) {break;}
+            }
+            int s=0;
+            t=0;
+            string tb = "";
+            for (int i=0;i<j;i++)
+            {
+                foreach (var ds in shop)
+                {
+                    if (ds.maSP==ma[i])
+                    {
+                        t=1;
+                        if (ds.tonkho<sl[i]) {tb="Không hợp lệ";break;}
+                        else {s=s+sl[i]*ds.giaban;}
+                    }
+                }
+                if (t==0 | tb=="Không hợp lệ") {break;}
+            }
+            if (t==1 & tb!="Không hợp lệ") {Console.WriteLine($"Số tiền cần phải trả cho hóa đơn là {s}");}
