@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "bttl2-c5-c6/1.0.0": {
+        "runtime": {
+          "bttl2-c5-c6.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "bttl2-c5-c6/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
